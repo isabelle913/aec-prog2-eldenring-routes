@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Routes, Route } from "react-router-dom";
 
 import Creatures from "./creatures/components/Creatures";
 
@@ -10,7 +11,9 @@ function App() {
       <div>
         <h1 className="text-center display-1">Elden Ring</h1>
         <QueryClientProvider client={queryClient}>
-          <Creatures />
+          <Routes>
+            <Route path="/" element={<Creatures />} />
+          </Routes>
         </QueryClientProvider>
       </div>
     </>

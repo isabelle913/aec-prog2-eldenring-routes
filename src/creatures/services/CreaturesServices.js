@@ -14,6 +14,15 @@ class CreaturesService {
     const data = await response.json();
     return data.data;
   }
+
+  async getCreatureById(id) {
+    const response = await fetch(`${this.url}/${id}`);
+    //console.log("response", response);
+    if (!response.ok) throw new Error();
+
+    const data = await response.json();
+    return data.data;
+  }
 }
 
 export default CreaturesService;
