@@ -10,6 +10,8 @@ const CardCreature = ({ creature }) => {
     backgroundImage: `url(${creature.image})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+
+    //backgroundColor: "#fff",
   };
 
   // TODO ?? Pourquoi mon link/navigate ne fonctionne pas, comment je dois passer l'url?
@@ -18,8 +20,8 @@ const CardCreature = ({ creature }) => {
 
   const onclick = () => {
     console.log("Miip");
-    // navigate(`https://eldenring.fanapis.com/api/creatures/${creature.id}`);
-    navigate(`/creatures/${creature.id}`);
+    navigate(`https://eldenring.fanapis.com/api/creatures/${creature.id}`);
+    //navigate(`/creatures/${creature.id}`);
   };
 
   return (

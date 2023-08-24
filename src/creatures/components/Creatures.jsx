@@ -9,7 +9,7 @@ const Creatures = () => {
   //console.log("creatureService", creatureService);
 
   const { isLoading, isError, data, error } = useQuery({
-    queryKey: ["creature"], // pour cache validation
+    queryKey: ["creatures"], // pour cache validation
     queryFn: () => creatureService.getAllCreatures(),
   });
 
